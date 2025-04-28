@@ -3,11 +3,14 @@ pragma solidity ^0.8.28;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
+
+import "./interfaces/IAuctionHouse.sol";
+
 /**
  * @title AuctionHouse
  * @dev Gas-optimized ETH auction contract following CEI and ReentrancyGuard.
  */
-contract AuctionHouse is Ownable, ReentrancyGuard {
+contract AuctionHouse is IAuctionHouse, Ownable, ReentrancyGuard {
     /// @notice The item being auctioned
     string public item;
 

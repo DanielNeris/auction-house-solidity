@@ -2,12 +2,14 @@
 pragma solidity ^0.8.28;
 
 import "./AuctionHouse.sol";
+import "./interfaces/IAuctionHouseFactory.sol";
+
 
 /**
  * @title AuctionHouseFactory
  * @dev Factory to deploy and track multiple AuctionHouse contracts.
  */
-contract AuctionHouseFactory {
+contract AuctionHouseFactory is IAuctionHouseFactory {
     /// @notice List of all deployed auctions
     address[] public allAuctions;
 
